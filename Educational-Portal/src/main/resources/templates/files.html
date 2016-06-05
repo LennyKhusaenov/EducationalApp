@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+
+    <title>Files</title>
+    <th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+<div class="container">
+    <th:block th:include="fragments/header :: header"></th:block>
+<h3> <table class="table">
+    <thead>
+    <tr>
+        <th>Files</th>
+        <th>Downloading</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="file : ${files}">
+        <div class="">
+            <td th:text="${file.getName()}"> </td>
+
+        </div>
+        <td> <a th:href="@{/upload/file(name=${file.getName()})}"> Download </a> </td>
+    </tr>
+    </tbody>
+</table>
+</h3>
+    </div>
+</body>
+</html>

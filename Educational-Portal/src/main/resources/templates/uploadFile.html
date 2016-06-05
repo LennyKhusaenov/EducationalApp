@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head lang="en">
+
+    <title>Spring Framework Guru</title>
+    <th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+<div class="container">
+    <th:block th:include="fragments/header :: header"></th:block>
+
+    <h1 th:inline="text">Hello, [[${#httpServletRequest.remoteUser}]]!</h1>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" class="btn btn-default" value="Sign Out"/>
+    </form>
+
+    <div>
+        <form role = "form" method="POST" enctype="multipart/form-data" action="/upload/">
+            <div class="form-group">
+            <table>
+                <tr><td>File to upload:</td><td><input type="file" class="form-control" name="file" /></td></tr>
+                <tr><td>Name:</td><td><input type="text" class="form-control" name="name" /></td></tr>
+                <tr><td></td><td><input type="submit" class="btn btn-default" value="Upload" /></td></tr>
+            </table>
+            </div>
+        </form>
+
+<br/><br/><br/>
+
+        <h3> <table class="table">
+            <thead>
+            <tr>
+                <th>Files</th>
+                <th>Downloading</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="file : ${files}">
+                <div class="">
+                    <td th:text="${file.getName()}"> </td>
+
+                </div>
+                <td> <a th:href="@{/upload/file(name=${file.getName()})}"> Download </a> </td>
+            </tr>
+            </tbody>
+        </table>
+        </h3>
+
+
+
+
+</div>
+    </div>
+</body>
+</html>

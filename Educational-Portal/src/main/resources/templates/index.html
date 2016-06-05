@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head lang="en">
+
+    <title>Spring Framework Guru</title>
+
+    <th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+
+<div class="container">
+    <th:block th:include="fragments/header :: header"></th:block>
+    <th:block th:if="${searchForm != null}" th:include="fragments/formPerson :: form(${searchForm})"></th:block>
+    <p th:if="${generateMessage != null}" th:text="${generateMessage}" class="bg-success"></p>
+
+    <p th:if="${#lists.isEmpty(persons)}" class="bg-danger">Result is Empty</p>
+
+    <div class="row" th:if="${not #lists.isEmpty(persons)}">
+        <p>Students and their work</p>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Works</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="person : ${persons}">
+                <td th:text="${person.getName()}"></td>
+                <td th:text="${person.getSurname()}">Doe</td>
+                <td th:text="${person.getEmail()}">john@example.com</td>
+                <td th:with="personDocs=${person.getDocuments()}">
+                    <div>
+                        <button class="btn btn-default dropdown-toggle collapse-document"
+                                th:attr="data-target='#documents_' + ${person.getId()}">
+                            <b th:text="${#lists.size(personDocs)}"></b> Documents<span class="icon-plus"></span>
+                        </button>
+                    </div>
+                    <div th:if="${not #lists.isEmpty(personDocs)}" th:id="'documents_' + ${person.getId()}"
+                         class="collapse">
+                        <table class="table table-hover">
+                            <thead>
+                            <th>Unique_Number</th>
+                            <th>Title</th>
+                            </thead>
+                            <tbody>
+                            <tr th:each="document : ${personDocs}">
+                                <td th:text="${document.getUniqueNumber()}"></td>
+                                <td th:text="${document.getTitle()}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

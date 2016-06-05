@@ -1,0 +1,11 @@
+.gazprom_logo {
+    background-image: url("../assets/gazprom_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: right;
+    height: 40px;
+    width: 10%;
+}
+.btn.right{
+    float: right;
+}
