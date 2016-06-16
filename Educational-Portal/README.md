@@ -2,7 +2,7 @@
 
 ### Requirements
 
-https://github.com/LennyKhusaenov/EducationalApp
+### https://github.com/LennyKhusaenov/EducationalApp
 
 ### Description
 - Implement a search for people by name or number of the document (use only one input for entering the search string).
