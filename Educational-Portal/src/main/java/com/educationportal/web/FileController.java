@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by Администратор on 29.05.2016.
+ * Created by leniz on 16.05.2016.
  */
 @Controller
 @RequestMapping(value = "/upload")

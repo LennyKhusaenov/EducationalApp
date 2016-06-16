@@ -12,7 +12,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 /**
- * Created by aleksandr on 11.02.2016.
+ * Created by leniz on 16.05.2016.
  */
 @Controller
 public class HomeController {
@@ -61,9 +61,5 @@ public class HomeController {
     return "index";
     }
 
-    @RequestMapping(value = "/files", method=RequestMethod.GET)
-    public String files(Model model) {
-        return "files";
-    }
 
 }

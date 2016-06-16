@@ -6,12 +6,12 @@ import org.springframework.stereotype.*;
 
 
 /**
- * Created by aleksandr on 13.02.2016.
+ * Created by leniz on 18.05.2016.
  */
 
 @Repository
 public interface PersonRepository extends CrudRepository<PersonEntity, Integer> {
 
 
-
 }
+

@@ -1,5 +1,5 @@
 /**
- * Created by aleksandr on 13.02.2016.
+ * Created by leniz on 16.05.2016.
  */
 $(function(){
     $(".btn.collapse-document").click(function() {
@@ -16,7 +16,7 @@ $(function(){
 
 // Load readme content
     $.ajax({
-        url: "https://raw.githubusercontent.com/fedotovaleksandr/ProjectEnergo/master/README.md",
+        url: "https://raw.githubusercontent.com/LennyKhusaenov/EducationalApp/master/Educational-Portal/README.md",
         dataType: 'text',
         success: function(data) {
 

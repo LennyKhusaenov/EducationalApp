@@ -1,7 +1,7 @@
 package com.educationportal.form;
 
 /**
- * Created by aleksandr on 14.02.2016.
+ * Created by leniz on 16.05.2016.
  */
 public class PersonSearchForm {
     private String search;

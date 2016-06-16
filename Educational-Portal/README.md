@@ -2,6 +2,8 @@
 
 ### Requirements
 
+https://raw.githubusercontent.com/LennyKhusaenov/EducationalApp/master/Educational-Portal/README.md
+
 - Implement a search for people by name or number of the document (use only one input for entering the search string).
 - Use maven
 - Refrain from using xml-settings

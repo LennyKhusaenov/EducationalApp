@@ -4,7 +4,7 @@ import com.educationportal.entity.DocumentEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Created by aleksandr on 13.02.2016.
+ * Created by leniz on 13.05.2016.
  */
 public interface  DocumentRepository extends CrudRepository<DocumentEntity, Integer> {
 

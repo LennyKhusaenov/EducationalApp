@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by aleksandr on 13.02.2016.
+ * Created by leniz on 16.05.2016.
  */
 @Entity
 @Table(name = "document", indexes = {

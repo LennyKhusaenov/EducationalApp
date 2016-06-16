@@ -1,7 +1,7 @@
 package com.educationportal.configuration;
 
 /**
- * Created by aleksandr on 13.02.2016.
+ * Created by leniz on 16.05.2016.
  */
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.
                 authorizeRequests().
                 antMatchers("/","/about","/webjars/jquery/2.1.4/jquery.min.js",
-                        "/webjars/bootstrap/3.3.4/css/bootstrap.min.css","/files","/educationalProgram")
+                        "/webjars/bootstrap/3.3.4/css/bootstrap.min.css","/files","/educationalProgram",
+                        "/js/public.js","/webjars/jquery/2.1.4/jquery.min.map")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()
