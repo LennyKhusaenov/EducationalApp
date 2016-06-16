@@ -21,10 +21,10 @@ https://github.com/LennyKhusaenov/EducationalApp
 
 ### Paths:
 
-* [Http://95.213.204.131/] - Home Page
-* [Http://95.213.204.131/about] - Load Content from Github Page.
-* [Http://95.213.204.131/generate] - Generate 30 Person entities with -05 doc per person.
-* [Http://95.213.204.131/upload] - Files for Administrative input files.
+* [http://localhost:8080/] - Home Page
+* [http://localhost:8080/about] - Load Content from Github Page.
+* [http://localhost:8080/generate] - Generate 30 Person entities with -05 doc per person.
+* [http://localhost:8080/upload] - Files for Administrative input files.
 
 
 ### Deploy
