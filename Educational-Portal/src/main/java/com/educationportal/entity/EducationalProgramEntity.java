@@ -11,7 +11,7 @@ import java.util.Vector;
 
 @Entity
 @Table(name ="program")
-public class EducationalProgramEntity {
+public class EducationalProgramEntity implements Serializable{
     @Id
     @GeneratedValue
     private long id;
